@@ -932,7 +932,7 @@ function showTab(name) {
     btnEl.disabled = false;
     btnEl.textContent = 'Enviar enlace de acceso';
     if (error) {
-      msgEl.textContent = 'Ese correo no tiene acceso autorizado. Contacta al administrador.';
+      msgEl.textContent = 'Error (' + (error.status || '?') + '): ' + error.message;
       msgEl.className = 'auth-msg error';
     } else {
       msgEl.textContent = 'Revisa tu correo y haz clic en el enlace para entrar.';
